@@ -3,10 +3,10 @@ def reformat_languages(languages)
   
   obj = Hash.new {|hash, key| hash[key] = {type: nil, style: []}}
 
-  languages.each_with_object(obj) do |(style,language), item|
+  languages.each_with_object(obj) do |(style,language), hash|
     language.each do |lang, hash_of_type|
-        item[lang][:style] << style
-        item[lang][:type] = hash_of_type[:type] 
+        hash[lang][:style] << style
+        hash[lang][:type] = hash_of_type[:type] 
   end
  end
 end
