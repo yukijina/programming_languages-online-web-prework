@@ -1,6 +1,7 @@
 def reformat_languages(languages)
   # your code here
   
+  #type: nil for st
   obj = Hash.new {|hash, key| hash[key] = {type: nil, style: []}}
 
   languages.each_with_object(obj) do |(kay,value), hash|
