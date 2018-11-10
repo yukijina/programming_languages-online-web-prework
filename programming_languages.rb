@@ -3,9 +3,9 @@ def reformat_languages(languages)
   
   obj = Hash.new {|hash, key| hash[key] = {type: nil, style: []}}
 
-  languages.each_with_object(obj) do |(style,language), hash|
-    language.each do |lang, hash_of_type|
-        hash[lang][:style] << style
+  languages.each_with_object(obj) do |(kay,value), hash|
+    value.each do |lang, hash_of_type|
+        hash[lang][:style] << key
         hash[lang][:type] = hash_of_type[:type] 
   end
  end
